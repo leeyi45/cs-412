@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+  <style>
+    #navbar {
+      justify-content: space-around;
+      background-color: #222277
+    }
+
+    #navbar a p {
+      color: #ffffff;
+      padding: 2px 10px;
+    }
+
+    #navbar a:hover {
+      background-color: #333388
+    }
+  </style>
+  <div class="hstack" id="navbar">
+    <a href="/quotes/about"><p>About</p></a>
+    <a href="/quotes/"><p>Quote</p></a>
+    <a href="/quotes/show_all"><p>Show All</p></a>
+  </div>
+  <div>
+    {% block content %}
+    {% endblock content %}
+  </div>
+</body>

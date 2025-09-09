@@ -1,7 +1,29 @@
+{% extends "./base.html" %}
 <!DOCTYPE html>
 <head>
-  <title>About Me | leeyi45</title>
+  <title>About | Quotes</title>
 </head>
-<body>
-  <h1>About Me</h1>
-</body>
+{% block content %}
+<div class="vstack">
+  <h1>About Winston Churchill</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/500px-Sir_Winston_Churchill_-_19086236948.jpg"></img>
+  <div style="width: 50em; text-align: center">
+    <p>
+      Sir Winston Leonard Spencer Churchill was a British statesman, military officer, and writer who was Prime Minister
+      of the United Kingdom from 1940 to 1945 (during the Second World War) and again from 1951 to 1955.  
+    </p>
+  </div>
+  <p style="color: gray"><em>Description taken from <a href="https://en.wikipedia.org/wiki/Winston_Churchill">Wikipedia</a></em></p>
+</div>
+<div class="vstack">
+<h1>About Me</h1>
+  This project is created in Django for the first assignment in CS412.
+  <br />
+  <h3>Links about me:</h3>
+  <ul>
+    <li>
+      <a href="https://github.com/leeyi45">My Github (<code>leeyi45</code>)</a>
+    </li>
+  </ul>
+</div>
+{% endblock content %}
