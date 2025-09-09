@@ -139,9 +139,23 @@ MEDIA_URL= "media/"  # note: no leading slash!
 
 CS_DEPLOYMENT_HOSTNAME = 'cs-webapps.bu.edu'
 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+}
+
 if socket.gethostname() == CS_DEPLOYMENT_HOSTNAME:
   STATIC_URL = f'/{BU_USERNAME}/static/'
   MEDIA_URL = f'/{BU_USERNAME}/media/'
   BASE_URL = f'/{BU_USERNAME}'
 else:
-  BASE_URL = '/'
+  BASE_URL = ''
