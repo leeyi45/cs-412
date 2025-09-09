@@ -1,0 +1,20 @@
+* {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* Represents a vertical stack of elements displayed using flex-box */
+.vstack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Represents a horizontal stack of elements displayed using flex-box */
+.hstack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
