@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-$eq#)*0m#&!bvq3g(jldkw(*5s6=e-!-z6d!=(hkkf4+svld9e
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "cs-webapps.bu.edu"
+    "cs-webapps.bu.edu",
+    "127.0.0.1"
 ]
 
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'cs412.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

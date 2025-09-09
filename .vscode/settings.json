@@ -1,3 +1,7 @@
 {
-  "python.defaultInterpreterPath": "/Users/leeyi45/.local/share/virtualenvs/cs-412-WeJycKpr/bin/python3"
+  "files.insertFinalNewline": true,
+  "python.defaultInterpreterPath": "/Users/leeyi45/.local/share/virtualenvs/cs-412-WeJycKpr/bin/python3",
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>All Quotes | Quotes</title>
+</head>
+<body>
+  <style>
+    .div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <div>
+    <h1>These are all the quotes available</h1>
+      {% for quote, image in data %}
+      <div>
+        <img src="{{ image }}" width="100em" height="100em"></img>
+        <p>{{ quote }}</p>
+      </div>
+      {% endfor %}
+  </div>
+</body>
