@@ -59,7 +59,7 @@ ROOT_URLCONF = 'cs412.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,5 +140,8 @@ MEDIA_URL= "media/"  # note: no leading slash!
 CS_DEPLOYMENT_HOSTNAME = 'cs-webapps.bu.edu'
 
 if socket.gethostname() == CS_DEPLOYMENT_HOSTNAME:
-    STATIC_URL = f'/{BU_USERNAME}/static/'
-    MEDIA_URL = f'/{BU_USERNAME}/media/'
+  STATIC_URL = f'/{BU_USERNAME}/static/'
+  MEDIA_URL = f'/{BU_USERNAME}/media/'
+  BASE_URL = f'/{BU_USERNAME}'
+else:
+  BASE_URL = '/'

@@ -4,6 +4,7 @@
 import random
 from django.http import HttpRequest
 from django.shortcuts import render
+from django.conf import settings
 
 QUOTES = [
   "The best argument against democracy is a five-minute conversation with the average voter.",
@@ -22,7 +23,9 @@ def about(req: HttpRequest):
   quotes you are displaying, as well as a note about the creator of this web
   application (you).
   """
-  return render(req, 'quotes/about.html')
+  return render(req, 'quotes/about.html', {
+    "base_url": settings.BASE_URL
+  })
 
 def quote(req: HttpRequest):
   """The /quote route
@@ -36,7 +39,8 @@ def quote(req: HttpRequest):
 
   return render(req, 'quotes/quote.html', {
     "quote_text": quote_text,
-    "image_url": image_url
+    "image_url": image_url,
+    "base_url": settings.BASE_URL
   })
 
 def show_all(req: HttpRequest):
@@ -46,5 +50,6 @@ def show_all(req: HttpRequest):
   """
 
   return render(req, 'quotes/show_all.html', {
-    "data": zip(QUOTES, IMAGES)
+    "data": zip(QUOTES, IMAGES),
+    "base_url": settings.BASE_URL
   })
